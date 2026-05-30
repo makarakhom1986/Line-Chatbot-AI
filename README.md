@@ -121,3 +121,22 @@ line-bot-ai/
 ## 📝 License
 
 MIT
+
+## 🚀 Vercel Deployment (CI)
+
+This repo includes a GitHub Actions workflow `.github/workflows/deploy.yml` that deploys to Vercel on pushes to `main`.
+
+What you need to configure in the GitHub repository settings → Secrets:
+
+- `VERCEL_TOKEN` — Create a Personal Token in Vercel (Account Settings → Tokens)
+- `VERCEL_ORG_ID` — Your Vercel Organization ID (from Vercel project settings)
+- `VERCEL_PROJECT_ID` — Your Vercel Project ID (from Vercel project settings)
+
+How to deploy manually (after adding secrets):
+
+```bash
+# push to main triggers the workflow
+git push origin main
+```
+
+If you prefer the Vercel dashboard, connect the GitHub repo there and Vercel will deploy automatically.
